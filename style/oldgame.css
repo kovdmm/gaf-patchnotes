@@ -1,0 +1,133 @@
+@import 'root.css';
+
+/* Tags */
+html {
+    background-size: cover;
+    background-repeat: no-repeat;   
+    min-height: 100%;
+}
+
+body { 
+    background: url('../images/backgrounds/1.jpg');
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+}
+
+li { 
+    list-style-type: none; 
+}
+
+ul { 
+    columns: 4;
+}
+
+@media screen and (max-width: 1700px) {
+    ul {
+        columns: 2;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    ul {
+        columns: 1;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    ul {
+        columns: 2;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .title {
+        grid-row: 1;
+    }
+    .balance {
+        grid-row: 2 / span 1;
+        grid-column: 1;
+    }
+    .game {
+        grid-row: 4;
+        grid-column: 1;
+    }
+    .balanceChanges {
+        grid-row: 3;
+        grid-column: 1;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    ul {
+        columns: 1;
+    }
+
+    .title h1 {
+        font-size: 40px;
+        line-height: normal;
+    }
+}
+
+
+/* Classes */
+.grid {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 0.25fr 2.5fr 2.5fr 0.25fr;
+    grid-gap: 20px;
+    margin: 10px;
+}
+
+.gridBG {
+    background: var(--IndexGridBackground);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.blank, .title, .game, .support {
+    padding: 10px;
+    text-align: center;
+    grid-column: 2 / span 2;
+}
+
+.blank {
+    grid-row: 1;
+}
+
+.title {
+    grid-row: 2;
+}
+
+.title h1 {
+    font-size: 40px;
+}
+
+.title p {
+    font-size: 16px;
+    color: var(--Text);
+}
+
+.game {
+    grid-row: 3;
+}
+
+.gamelist {
+    grid-row: 3;
+}
+
+.support {
+    grid-row: 4;
+}
+
+.header {
+    background: var(--Background);
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}

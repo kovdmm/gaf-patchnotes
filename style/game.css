@@ -1,0 +1,70 @@
+@import './root.css';
+@import '../style/components/card.css';
+@import '../style/components/images.css';
+@import '../style/components/video.css';
+
+.Grid {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-gap: 20px;
+    margin: 10px;
+}
+
+.Content {
+    grid-column: 2 ;
+}
+
+.Intro p {
+    color: var(--Text);
+}
+
+.Sidebar {
+    grid-column: 3;
+    position: relative;
+}
+
+.Sidebar h2 a {
+    color: var(--Text);
+    text-decoration: none;
+}
+
+.IconGrid {
+    position: sticky;
+    top: 20px;
+    background: var(--Background);
+    padding: 5px 20px 20px 20px;
+    margin-left: 5px;
+    color: var(--Text);
+    text-align: justify;
+    border-radius: 15px;
+}
+
+.IconGrid h2 {
+    margin: 10px 0 0 0;
+}
+
+.IconGrid img {
+    width: 45px;
+    height: 45px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.BackToTop {
+  text-align: center;  
+  border-radius: 50%;
+}
+
+.BackToTop a {
+    text-decoration: none;
+    color: var(--Top);
+}
+
+.TopText {
+    font-size: 20px;
+}
