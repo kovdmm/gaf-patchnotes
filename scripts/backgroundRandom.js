@@ -1,12 +1,12 @@
 function setBackground(mediaQuery) {
   const htmlElement = document.documentElement;
   const imgs = [
-    '/assets/images/backgrounds/1.jpg',
-    '/assets/images/backgrounds/2.jpg',
-    '/assets/images/backgrounds/3.jpg',
-    '/assets/images/backgrounds/4.jpg',
-    '/assets/images/backgrounds/5.jpg',
-    '/assets/images/backgrounds/6.jpg',
+    '../assets/images/backgrounds/1.jpg',
+    '../assets/images/backgrounds/2.jpg',
+    '../assets/images/backgrounds/3.jpg',
+    '../assets/images/backgrounds/4.jpg',
+    '../assets/images/backgrounds/5.jpg',
+    '../assets/images/backgrounds/6.jpg',
   ];
 
   // Preload images for better UX and avoid flickering
