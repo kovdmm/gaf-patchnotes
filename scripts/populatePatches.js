@@ -1,6 +1,6 @@
 async function populate() {
   console.log(requestURL)
-  const requestURL = '/assets/data/patches.json';
+  const requestURL = './assets/data/patches.json';
 
   try {
     const response = await fetch(requestURL, { cache: 'no-cache' });
