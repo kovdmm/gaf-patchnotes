@@ -1,5 +1,4 @@
 async function populate() {
-  console.log(requestURL)
   const requestURL = './assets/data/patches.json';
 
   try {
