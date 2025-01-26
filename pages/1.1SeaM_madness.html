@@ -345,7 +345,7 @@
   </body>
   <footer>
     <div class="BackToTop">
-      <button  href="#top">
+     <button onclick="scrollToTop()">
           Поднятся на верх страницы.
       </button>
     </div>
@@ -355,4 +355,12 @@
       <p>© 2015-2025 GAPForever</p>
     </span>
   </footer>
+<script>
+ function scrollToTop() {
+   window.scrollTo({
+     top: 0,
+     behavior: 'smooth' // Для плавной прокрутки
+   });
+ }
+ </script>	
 </html>
