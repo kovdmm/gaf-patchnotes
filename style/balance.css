@@ -129,6 +129,14 @@ header {
   transition: box-shadow 0.3s ease; /* Smooth box shadow transition */
   border-radius: 10px;
 }
+.unit-icon {
+    width: 600px;
+    height: 240px;
+}
+.unit-icon2 {
+    width: 138px;
+    height: 27px;
+}
 .IconSidebarSubgrid img:hover {
   box-shadow: 0 0 10px var(--IconGlow); /* Icon glow on hover */
 }
