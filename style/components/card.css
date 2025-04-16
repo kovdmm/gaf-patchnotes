@@ -33,13 +33,17 @@
 
 .Card img.preview,
 .Card iframe.preview {
-  width: 100%;
+  max-width: 100%;
   margin-top: 5px;
   display: block;
 }
 
 .Card img.preview {
   width: auto;
+}
+
+.Card iframe.preview {
+  width: 854px;
 }
 
 .Card h4 img {
