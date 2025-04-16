@@ -232,7 +232,7 @@
     // handle resize and resize preview videos
     const videoPreviews = document.querySelectorAll("iframe.preview");
     if (videoPreviews.length) {
-      const handleResize = debounce(() => resize(videoPreviews, 9 / 16), 200);
+      const handleResize = debounce(() => resize(videoPreviews, 9 / 16), 25);
       window.addEventListener("resize", handleResize);
       setTimeout(handleResize, 50);
     }
