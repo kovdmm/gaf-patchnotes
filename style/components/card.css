@@ -1,36 +1,69 @@
-@import '../root.css';
+@import "../root.css";
 
 /* Main Card Styles */
 .Card {
   background: var(--Card);
-  border-radius: 1em;
+  border-radius: 10px;
   padding: 16px 24px;
-  margin: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06); /* Softer layered shadow */
+  margin-bottom: 20px;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.06); /* Softer layered shadow */
   color: var(--Text);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.1s ease,
+    border-color 0.1s ease;
+  border: 1px solid transparent;
 }
 
 /* Card Hover for Interaction */
 .Card:hover {
-  transform: translateY(-5px); /* Slight lift effect */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+  border-color: var(--Link-Unvisited);
 }
 
 /* Image Styling */
 .Card img {
-  margin-bottom: 15px;
   max-width: 100%;
   height: auto;
   border-radius: 0.5em;
   object-fit: cover; /* Ensure consistent image aspect ratio */
-  transition: transform 0.2s ease;
 }
 
-.Card img:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
+.Card img.preview,
+.Card iframe.preview {
+  max-width: 100%;
+  margin-top: 5px;
+  display: block;
+}
+
+.Card img.preview {
+  width: auto;
+}
+
+.Card iframe.preview {
+  width: 854px;
+}
+
+.Card h4 img {
+  margin-bottom: 3px;
+  height: 64px;
+  width: 64px;
+}
+
+.Card ul {
+  padding: 0;
+  padding-top: 1rem;
+}
+
+.Card ul ul {
+  padding: 0;
+  padding-left: 1.5rem;
+}
+
+.Card ul ul li {
+  list-style: square;
 }
 
 /* Optional Clickable Card */
@@ -56,8 +89,21 @@
   color: var(--Text);
 }
 
-/* Button inside the Card */
+.group {
+  background: var(--group);
+  border-bottom: 1px solid #333;
+  border-radius: 20px;
+  padding: 5px 20px 0;
+  margin-bottom: 20px;
+}
+
 .Card a {
+  color: var(--Link-Unvisited);
+  font-weight: bold;
+}
+
+/* Button inside the Card */
+.Card a.button-link {
   display: inline-block;
   padding: 10px 15px;
   background: var(--ButtonBackground);
@@ -65,31 +111,31 @@
   border-radius: 5px;
   text-decoration: none;
   margin-top: auto;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.Card a:hover {
+.Card a.button-link:hover {
   background: var(--ButtonHoverBackground);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .Card {
-    padding: 12px 20px;
-    margin: 15px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.06);
+    padding: 12px 20px 0;
+    margin-bottom: 15px;
+    box-shadow:
+      0 3px 5px rgba(0, 0, 0, 0.1),
+      0 2px 3px rgba(0, 0, 0, 0.06);
   }
 }
 
 @media (max-width: 420px) {
   .Card {
-    padding: 8px 16px;
-    margin: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
-  }
-
-  .Card img {
+    padding: 8px 16px 0;
     margin-bottom: 10px;
+    box-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.1),
+      0 1px 2px rgba(0, 0, 0, 0.05);
   }
 
   .Card h3,

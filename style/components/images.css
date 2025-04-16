@@ -20,7 +20,7 @@
 }
 
 .ImageSlider > div:before {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   bottom: 0;
@@ -30,9 +30,7 @@
   background: linear-gradient(-45deg, white 50%, transparent 0);
   background-clip: content-box;
   cursor: ew-resize;
-  filter: drop-shadow(
-    0 0 6px rgba(0, 0, 0, 0.4)
-  ); /* Softer shadow for better aesthetics */
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4)); /* Softer shadow for better aesthetics */
   transition: transform 0.2s ease; /* Smooth interaction when clicked */
 }
 
