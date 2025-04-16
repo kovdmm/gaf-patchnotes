@@ -9,7 +9,10 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
   text-align: center;
   min-width: 100px; /* Ensures a minimum button width */
   min-height: 40px;

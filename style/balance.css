@@ -1,8 +1,7 @@
-@import '../style/root.css';
-@import '../style/components/card.css';
-@import '../style/components/images.css';
-@import '../style/components/video.css';
-@import '../style/components/button.css';
+@import "../style/root.css";
+@import "../style/components/card.css";
+@import "../style/components/images.css";
+@import "../style/components/button.css";
 
 h1,
 h2,
@@ -10,7 +9,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-style: normal;
   font-weight: normal;
   margin: 10px 0;
@@ -18,6 +17,11 @@ h6 {
 
 a {
   color: var(--Link);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--Link-Hover);
   text-decoration: underline;
 }
 
@@ -34,12 +38,19 @@ header {
   padding: 15px;
 }
 
+footer {
+  display: flex;
+  padding: 15px;
+  gap: 7px;
+  flex-direction: column;
+}
+
 .patchDescription {
   margin: 10px;
 }
 
 .Grid {
-  padding: 10px;
+  padding: 0 20px;
   display: grid;
   grid-template-columns: 1fr 3fr 0.75fr;
   gap: 20px;
@@ -55,24 +66,6 @@ header {
   padding-right: 10px;
 }
 
-.Card a {
-  color: var(--Link-Card);
-  text-decoration: underline;
-}
-
-.Card a:hover {
-  color: var(--Link-Hover);
-}
-
-.Intro p {
-  color: var(--Text);
-  padding: 10px;
-}
-
-.Intro h3 {
-  padding-left: 10px;
-}
-
 .FlexboxContainer {
   padding-left: 10px;
 }
@@ -81,27 +74,48 @@ header {
 .Sidebar {
   grid-column: 3; /* Positioning within the grid */
   position: relative; /* Relative positioning */
+  padding-bottom: 20px;
 }
 
 /* Sidebar Title */
-.Sidebar h2 a {
-  color: var(--Text); /* Text color */
-  text-decoration: none; /* Remove underline from links */
+.Sidebar a {
+  color: var(--Link-Unvisited);
+  font-weight: bold;
+}
+
+.Sidebar a:hover {
+  color: var(--Link-Hover);
 }
 
 /*Icon Sidebar Container */
-.IconSidebar {
+.icon-sidebar-wrapper {
   position: sticky; /* Sticky positioning */
   top: 20px; /* Distance from the top */
   background: var(--IconGridBackground); /* Background color */
-  padding: 5px 20px; /* Padding */
-  margin-left: 5px; /* Margin from the left */
   color: var(--Text); /* Text color */
   text-align: justify; /* Text alignment */
   border-radius: 15px; /* Border radius */
-  display: grid; /* Enable grid layout */
-  grid-template-columns: repeat(4, 1fr); /* Four column layout */
+  max-height: calc(100vh - 40px);
+  height: calc(500px);
+
+  overflow: hidden;
+}
+
+.IconSidebar {
   gap: 5px; /* Space between rows */
+  overflow-y: scroll;
+  width: calc(100% + 17px);
+  height: 100%;
+}
+
+.IconSidebar div,
+.IconSidebar h2,
+.IconSidebar h3 {
+  grid-column: 1 / -1;
+}
+
+.icon-sidebar-inner {
+  padding: 5px 20px 20px; /* Padding */
 }
 
 /* Title in Icon Sidebar */
@@ -116,27 +130,35 @@ header {
 /* Subgrid in Icon Sidebar */
 .IconSidebarSubgrid {
   display: grid; /* Enable grid layout */
-  grid-template-columns: repeat(4, 0.15fr);
-  gap: 5px; /* Space between grid items */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px; /* Space between grid items */
 }
 
 /* Icon in Subgrid */
 .IconSidebarSubgrid img {
   width: 50px; /* Icon width */
   height: 50px; /* Icon height */
+  place-self: center;
   text-decoration: none; /* Remove underline from links */
   color: #3498db; /* Icon color */
   transition: box-shadow 0.3s ease; /* Smooth box shadow transition */
   border-radius: 10px;
 }
+
 .unit-icon {
-    width: 600px;
-    height: 240px;
+  width: 600px;
+  height: 240px;
 }
+
 .unit-icon2 {
-    width: 138px;
-    height: 27px;
+  width: 138px;
+  height: 27px;
 }
+
+.IconSidebarSubgrid a {
+  text-align: center;
+}
+
 .IconSidebarSubgrid img:hover {
   box-shadow: 0 0 10px var(--IconGlow); /* Icon glow on hover */
 }
